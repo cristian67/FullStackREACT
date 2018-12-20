@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Products extends Component {
+
   componentWillMount(){
     this.queryAPI();
   }
@@ -11,9 +12,7 @@ class Products extends Component {
     const url = 'http://localhost:5000/productoss';
 
     return axios.get(url)
-                .then(res => console.log(res));
-
-
+                .then(res => console.log(res.data));
   }
     render(){
         return(

@@ -14,7 +14,7 @@ import Home from './Home/Home';
 import Users from './admin/users/Users';
 import CategoriesLogin from './admin/categories/Categories';
 import ProductsLogin from './admin/products/Products';
-import Login from './admin/login/Login';
+import VerificaLogin from './admin/verificaLogin';
 
 
 export const makeMainRoutes = () => {
@@ -33,7 +33,7 @@ export const makeMainRoutes = () => {
 
 
       { /* Rutas Privadas (Login) */ }
-      <Route exact path = "/login" component = { Login }/>
+      <Route exact path = "/login" component = { VerificaLogin }/>
       <Route exact path = "/login/usuarios" component = { Users }/>
       <Route exact path = "/login/categorias" component = { CategoriesLogin }/>
       <Route exact path = "/login/productos" component = { ProductsLogin } />

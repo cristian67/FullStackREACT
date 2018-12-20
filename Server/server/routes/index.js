@@ -7,7 +7,7 @@ const app = express();
 app.use(require('../routes/usuario'));
 app.use(require('../routes/producto'));
 app.use(require('../routes/categoria'));
-app.use(require('../routes/login'))
+app.use('/api', require('../routes/login'))
 
 
 module.exports = app;

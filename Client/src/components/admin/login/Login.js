@@ -1,13 +1,33 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
-    
-    emailRef    = React.createRef();
-    passwordRef = React.createRef();
+    constructor() {
+      super();
+
+      this.emailRef    = React.createRef();
+      this.passwordRef = React.createRef();
+
+      this.obtenerToken = this.obtenerToken.bind(this);
+
+    }
+
+    //FUNCION OBTENER DATOSLOGIN
+    obtenerToken(e){
+    e.preventDefault();
+
+    //Crear objecto
+    const datosLogin = {
+      email: this.emailRef.current.value,
+      password: this.passwordRef.current.value
+    }
+
+    this.props.verificaToken(datosLogin);
+
+    }
 
     render(){
         return(
-       
+
             <div className="container">
                 <div className="row">
                 <div className="card-panel">
@@ -15,7 +35,7 @@ class Login extends Component {
                 </div>
                     <div className="card-panel">
 
-                        <form> 
+                        <form onSubmit={this.obtenerToken}>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input ref={this.emailRef} type="text" placeholder="E-mail" />
@@ -33,10 +53,10 @@ class Login extends Component {
                         </form>
                     </div>
                 </div>
-            </div>     
-            
+            </div>
+
         )
-    }    
+    }
 }
 
 export default Login;

@@ -11,7 +11,7 @@ let { verificaToken } = require('../../server/middleware/autenticacion');
 ///========================
 //  Mostrar Usuarios
 //=========================
-app.get('/usuario', verificaToken, (req, res) => {
+app.get('/api/usuario', verificaToken, (req, res) => {
 
     Usuario.find({ estado: true })
         .exec((err, usuarios) => {
