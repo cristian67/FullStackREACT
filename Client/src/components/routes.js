@@ -30,9 +30,10 @@ export const makeMainRoutes = () => {
 
       <Route exact path = "/productos" component = { Products }/>
 
+
+
       { /* Rutas Privadas (Login) */ }
       <Route exact path = "/login" component = { Login }/>
-
       <Route exact path = "/login/usuarios" component = { Users }/>
       <Route exact path = "/login/categorias" component = { CategoriesLogin }/>
       <Route exact path = "/login/productos" component = { ProductsLogin } />

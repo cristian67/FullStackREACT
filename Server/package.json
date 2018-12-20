@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "servidor":"nodemon server/server --excec babel-node -e js"
+    "servidor": "nodemon server/server --excec babel-node -e js"
   },
   "author": "Cristian",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.2",
     "body-parse": "^0.1.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.0",
